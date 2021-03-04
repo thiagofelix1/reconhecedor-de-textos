@@ -94,6 +94,7 @@ class ResultFragment:Fragment() {
 
             openDialog()
 
+
         }
 
         return binding.root

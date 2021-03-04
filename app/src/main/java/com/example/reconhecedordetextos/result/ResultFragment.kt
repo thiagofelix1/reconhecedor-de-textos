@@ -92,6 +92,7 @@ class ResultFragment:Fragment() {
             customAlertDialogView = LayoutInflater.from(contextM)
                     .inflate(R.layout.dialog_language_options , null , false)
 
+
             openDialog()
 
         }

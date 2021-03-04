@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/scannerFragment">
+
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.example.reconhecedordetextos.scanner.ScannerFragment"
+        android:label="ScannerFragment"
+        tools:layout="@layout/fragment_scanner"
+        >
+        <action
+            android:id="@+id/action_scannerFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/scannerFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.reconhecedordetextos.result.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_result"
+        >
+        <argument
+            android:name="resultText"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="photoPath"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
